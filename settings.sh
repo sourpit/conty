@@ -11,7 +11,7 @@ PACKAGES=(
 	# core
 	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr gamescope
 	# video
-	mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
+	mesa-tkg-git lib32-mesa-tkg-git vulkan-radeon lib32-vulkan-radeon
 	vulkan-intel lib32-vulkan-intel
 	vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers
 	lib32-vulkan-mesa-layers libva-intel-driver lib32-libva-intel-driver
@@ -36,27 +36,24 @@ PACKAGES=(
 	libxcrypt-compat lib32-libxcrypt-compat libva lib32-libva sqlite lib32-sqlite
 	gtk3 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
-	openssl-1.1 lib32-openssl-1.1 libnm lib32-libnm
+	openssl-1.1 lib32-openssl-1.1
 	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
 	# development
 	base-devel git meson mingw-w64-gcc cmake
 	# gaming
 	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch
-	minigalaxy gamehub legendary prismlauncher bottles playonlinux obs-studio
-	retroarch retroarch-assets-ozone libretro-beetle-psx-hw sunshine
+	minigalaxy retroarch retroarch-assets-ozone libretro-beetle-psx-hw
 	libretro-blastem libretro-bsnes libretro-dolphin duckstation
 	libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-retrodream libretro-yabause pcsx2-avx-git
 	# extra
-	nano ttf-dejavu ttf-liberation firefox mpv geany pcmanfm
-	htop qbittorrent speedcrunch gpicview file-roller openbox lxterminal
-	yt-dlp minizip nautilus genymotion jre17-openjdk gnome-themes-extra
- 	ffmpegthumbnailer tmux
+	ttf-dejavu ttf-liberation librewolf pcmanfm
+	file-roller jre17-openjdk ffmpegthumbnailer
 )
 
 # If you want to install AUR packages, specify them in this variable
-AUR_PACKAGES=(faugus-launcher-git)
+AUR_PACKAGES=(shatteredprism)
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
@@ -66,7 +63,7 @@ AUR_PACKAGES=(faugus-launcher-git)
 # Arch Linux repos will be replaced with their optimized versions from ALHP
 #
 # Set this variable to any value if you want to enable this repository
-ENABLE_ALHP_REPO=
+ENABLE_ALHP_REPO=1
 
 # Feature levels for ALHP. Available feature levels are 2 and 3
 # For level 2 you need a CPU with SSE4.2 instructions
@@ -139,7 +136,6 @@ DWARFS_COMPRESSOR_ARGUMENTS=(
 	-S 22 -B 1 --order nilsimsa
 	-W 12 -w 4 --no-history-timestamps --no-create-timestamp
 )
-
 
 # List of links to arch bootstrap archive
 # Conty will try to download each one of them sequentially
