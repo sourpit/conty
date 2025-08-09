@@ -43,8 +43,8 @@ PACKAGES=(
 	# gaming
 	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch
 	retroarch retroarch-assets-ozone libretro-beetle-psx-hw
-	libretro-blastem libretro-bsnes libretro-dolphin duckstation
-	libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia
+	libretro-blastem libretro-bsnes libretro-dolphin libretro-gambatte
+  libretro-melonds libretro-mgba libretro-nestopia
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-retrodream libretro-yabause pcsx2-avx-git
 	# extra
