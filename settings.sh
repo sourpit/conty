@@ -48,7 +48,7 @@ PACKAGES=(
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-retrodream libretro-yabause pcsx2-avx-git
   # vrchat
-  inotify-tools wlx-overlay-s-git
+  wlx-overlay-s-git
 	# extra
 	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
