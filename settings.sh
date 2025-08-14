@@ -48,14 +48,14 @@ PACKAGES=(
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-retrodream libretro-yabause pcsx2-avx-git
   # vrchat
-  inotify-tools wlx-overlay-s-git vrc-get vrcx-bin
+  inotify-tools wlx-overlay-s-git
 	# extra
 	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
 )
 
 # If you want to install AUR packages, specify them in this variable
-AUR_PACKAGES=(shatteredprism-bin obsidian-bin)
+AUR_PACKAGES=(shatteredprism-bin obsidian-bin vrc-get vrcx-bin)
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
