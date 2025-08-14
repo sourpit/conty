@@ -9,7 +9,7 @@ PACKAGES=(
 	alsa-lib lib32-alsa-lib alsa-plugins lib32-alsa-plugins libpulse
 	lib32-libpulse alsa-tools alsa-utils pipewire lib32-pipewire pipewire-pulse pipewire-jack lib32-pipewire-jack
 	# core
-	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr gamescope inotify-tools
+	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr gamescope
 	# video
 	mesa-tkg-git lib32-mesa-tkg-git vulkan-radeon lib32-vulkan-radeon
 	vulkan-intel lib32-vulkan-intel
@@ -47,6 +47,8 @@ PACKAGES=(
   libretro-melonds libretro-mgba libretro-nestopia
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-retrodream libretro-yabause pcsx2-avx-git
+  # vrchat
+  inotify-tools wlx-overlay-s-git vrc-get vrcx-bin
 	# extra
 	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
