@@ -39,7 +39,7 @@ PACKAGES=(
 	openssl-1.1 lib32-openssl-1.1
 	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
 	# development
-	git
+	git solvespace
 	# gaming
 	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch
 	retroarch retroarch-assets-ozone libretro-beetle-psx-hw
