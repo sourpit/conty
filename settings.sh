@@ -46,16 +46,14 @@ PACKAGES=(
 	libretro-blastem libretro-bsnes libretro-dolphin libretro-gambatte
   libretro-melonds libretro-mgba libretro-nestopia
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
-	libretro-retrodream libretro-yabause pcsx2-avx-git
-  # vrchat
-  wlx-overlay-s-git
+	libretro-yabause pcsx2-avx-git
 	# extra
-	ttf-dejavu ttf-liberation librewolf pcmanfm
+	ttf-dejavu ttf-liberation librewolf pcmanfm kdenlive-stabledeps-git
 	file-roller jre17-openjdk ffmpegthumbnailer
 )
 
 # If you want to install AUR packages, specify them in this variable
-AUR_PACKAGES=(shatteredprism-bin obsidian-bin vrc-get vrcx-bin)
+AUR_PACKAGES=(shatteredprism-bin obsidian-bin)
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
