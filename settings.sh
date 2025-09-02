@@ -7,12 +7,13 @@
 PACKAGES=(
 	# audio
 	alsa-lib lib32-alsa-lib alsa-plugins lib32-alsa-plugins libpulse
-	lib32-libpulse alsa-tools alsa-utils pipewire lib32-pipewire pipewire-pulse pipewire-jack lib32-pipewire-jack
+	lib32-libpulse alsa-tools alsa-utils pipewire lib32-pipewire pipewire-pulse
+  pipewire-jack lib32-pipewire-jack
 	# core
-	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr gamescope
+	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr
+  gamescope
 	# video
-	mesa-tkg-git lib32-mesa-tkg-git vulkan-radeon lib32-vulkan-radeon
-	vulkan-intel lib32-vulkan-intel
+	mesa-tkg-git lib32-mesa-tkg-git vulkan-intel lib32-vulkan-intel
 	vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers
 	lib32-vulkan-mesa-layers libva-intel-driver lib32-libva-intel-driver
 	intel-media-driver mesa-utils vulkan-tools libva-utils lib32-mesa-utils
@@ -28,16 +29,16 @@ PACKAGES=(
 	lib32-alsa-plugins alsa-lib lib32-alsa-lib gnutls lib32-gnutls
 	giflib lib32-giflib gst-libav gst-plugin-pipewire gst-plugins-ugly
 	gst-plugins-bad gst-plugins-bad-libs
-	gst-plugins-base-libs lib32-gst-plugins-base-libs gst-plugins-base lib32-gst-plugins-base
-	gst-plugins-good lib32-gst-plugins-good gstreamer lib32-gstreamer
-	libpng lib32-libpng v4l-utils lib32-v4l-utils
+	gst-plugins-base-libs lib32-gst-plugins-base-libs gst-plugins-base
+  lib32-gst-plugins-base gst-plugins-good lib32-gst-plugins-good gstreamer
+  lib32-gstreamer libpng lib32-libpng v4l-utils lib32-v4l-utils
 	libgpg-error lib32-libgpg-error libjpeg-turbo lib32-libjpeg-turbo
 	libgcrypt lib32-libgcrypt ncurses lib32-ncurses ocl-icd lib32-ocl-icd
 	libxcrypt-compat lib32-libxcrypt-compat libva lib32-libva sqlite lib32-sqlite
 	gtk3 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
-	openssl-1.1 lib32-openssl-1.1
-	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
+	openssl-1.1 lib32-openssl-1.1 cabextract wget gamemode lib32-gamemode
+  mangohud lib32-mangohud
 	# development
 	git solvespace
 	# gaming
@@ -48,7 +49,7 @@ PACKAGES=(
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
 	libretro-yabause pcsx2-avx-git
 	# extra
-	ttf-dejavu ttf-liberation librewolf pcmanfm kdenlive-stabledeps-git
+	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
 )
 
