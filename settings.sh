@@ -13,7 +13,7 @@ PACKAGES=(
 	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr
   gamescope
 	# video
-	mesa-tkg-git lib32-mesa-tkg-git vulkan-intel lib32-vulkan-intel
+	mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 	vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers
 	lib32-vulkan-mesa-layers libva-intel-driver lib32-libva-intel-driver
 	intel-media-driver mesa-utils vulkan-tools libva-utils lib32-mesa-utils
@@ -39,15 +39,15 @@ PACKAGES=(
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
 	openssl-1.1 lib32-openssl-1.1 cabextract wget gamemode lib32-gamemode
   mangohud lib32-mangohud
-	# development
-	git solvespace
+	# productive
+	solvespace openboard
 	# gaming
 	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch
 	retroarch retroarch-assets-ozone libretro-beetle-psx-hw
 	libretro-blastem libretro-bsnes libretro-dolphin libretro-gambatte
   libretro-melonds libretro-mgba libretro-nestopia
 	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
-	libretro-yabause pcsx2-avx-git
+	libretro-yabause pcsx2-git
 	# extra
 	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
