@@ -7,12 +7,13 @@
 PACKAGES=(
 	# audio
 	alsa-lib lib32-alsa-lib alsa-plugins lib32-alsa-plugins libpulse
-	lib32-libpulse alsa-tools alsa-utils pipewire lib32-pipewire pipewire-pulse pipewire-jack lib32-pipewire-jack
+	lib32-libpulse alsa-tools alsa-utils pipewire lib32-pipewire pipewire-pulse
+  pipewire-jack lib32-pipewire-jack
 	# core
-	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr gamescope
+	xorg-xwayland qt6-wayland wayland lib32-wayland qt5-wayland xorg-server-xephyr
+  gamescope
 	# video
-	mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon
-	vulkan-intel lib32-vulkan-intel
+	mesa lib32-mesa vulkan-intel lib32-vulkan-intel
 	vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers
 	lib32-vulkan-mesa-layers libva-intel-driver lib32-libva-intel-driver
 	intel-media-driver mesa-utils vulkan-tools libva-utils lib32-mesa-utils
@@ -28,35 +29,27 @@ PACKAGES=(
 	lib32-alsa-plugins alsa-lib lib32-alsa-lib gnutls lib32-gnutls
 	giflib lib32-giflib gst-libav gst-plugin-pipewire gst-plugins-ugly
 	gst-plugins-bad gst-plugins-bad-libs
-	gst-plugins-base-libs lib32-gst-plugins-base-libs gst-plugins-base lib32-gst-plugins-base
-	gst-plugins-good lib32-gst-plugins-good gstreamer lib32-gstreamer
-	libpng lib32-libpng v4l-utils lib32-v4l-utils
+	gst-plugins-base-libs lib32-gst-plugins-base-libs gst-plugins-base
+  lib32-gst-plugins-base gst-plugins-good lib32-gst-plugins-good gstreamer
+  lib32-gstreamer libpng lib32-libpng v4l-utils lib32-v4l-utils
 	libgpg-error lib32-libgpg-error libjpeg-turbo lib32-libjpeg-turbo
 	libgcrypt lib32-libgcrypt ncurses lib32-ncurses ocl-icd lib32-ocl-icd
 	libxcrypt-compat lib32-libxcrypt-compat libva lib32-libva sqlite lib32-sqlite
 	gtk3 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
-	openssl-1.1 lib32-openssl-1.1 libnm lib32-libnm
-	cabextract wget gamemode lib32-gamemode mangohud lib32-mangohud
-	# development
-	base-devel git meson mingw-w64-gcc cmake
+	openssl-1.1 lib32-openssl-1.1 cabextract wget gamemode lib32-gamemode
+  mangohud lib32-mangohud
+	# productive
+	solvespace openboard
 	# gaming
 	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch
-	minigalaxy gamehub legendary prismlauncher bottles playonlinux obs-studio
-	retroarch retroarch-assets-ozone libretro-beetle-psx-hw
-	libretro-blastem libretro-bsnes libretro-dolphin duckstation-gpl
-	libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia
-	libretro-parallel-n64 libretro-picodrive libretro-ppsspp
-	libretro-yabause pcsx2-git
 	# extra
-	nano ttf-dejavu ttf-liberation firefox mpv geany pcmanfm
-	htop qbittorrent speedcrunch gpicview file-roller openbox lxterminal
-	yt-dlp minizip nautilus genymotion jre17-openjdk gnome-themes-extra
- 	ffmpegthumbnailer tmux
+	ttf-dejavu ttf-liberation librewolf pcmanfm
+	file-roller jre17-openjdk ffmpegthumbnailer
 )
 
 # If you want to install AUR packages, specify them in this variable
-AUR_PACKAGES=(faugus-launcher-git)
+AUR_PACKAGES=(obsidian-bin)
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
@@ -66,40 +59,21 @@ AUR_PACKAGES=(faugus-launcher-git)
 # Arch Linux repos will be replaced with their optimized versions from ALHP
 #
 # Set this variable to any value if you want to enable this repository
-ENABLE_ALHP_REPO=
+ENABLE_ALHP_REPO=1
 
 # Feature levels for ALHP. Available feature levels are 2 and 3
 # For level 2 you need a CPU with SSE4.2 instructions
 # For level 3 you need a CPU with AVX2 instructions
-ALHP_FEATURE_LEVEL=2
+ALHP_FEATURE_LEVEL=3
 
 # Locales to configure in the image
 LOCALES=(
-	'ar_EG.UTF-8 UTF-8'
 	'en_US.UTF-8 UTF-8'
-	'en_GB.UTF-8 UTF-8'
 	'en_CA.UTF-8 UTF-8'
-	'en_SG.UTF-8 UTF-8'
-	'es_MX.UTF-8 UTF-8'
-	'zh_CN.UTF-8 UTF-8'
-	'fr_FR.UTF-8 UTF-8'
 	'ru_RU.UTF-8 UTF-8'
 	'ru_UA.UTF-8 UTF-8'
-	'es_ES.UTF-8 UTF-8'
 	'de_DE.UTF-8 UTF-8'
-	'pt_BR.UTF-8 UTF-8'
-	'it_IT.UTF-8 UTF-8'
-	'id_ID.UTF-8 UTF-8'
 	'ja_JP.UTF-8 UTF-8'
-	'bg_BG.UTF-8 UTF-8'
-	'pl_PL.UTF-8 UTF-8'
-	'da_DK.UTF-8 UTF-8'
-	'ko_KR.UTF-8 UTF-8'
-	'tr_TR.UTF-8 UTF-8'
-	'hu_HU.UTF-8 UTF-8'
-	'cs_CZ.UTF-8 UTF-8'
-	'bn_IN UTF-8'
-	'hi_IN UTF-8'
 )
 
 # Content of pacman mirrorrlist file before reflector is installed and used to fetch new one
@@ -133,13 +107,12 @@ SQUASHFS_COMPRESSOR_ARGUMENTS=(-b 1M -comp "${SQUASHFS_COMPRESSOR}" -Xcompressio
 #SQUASHFS_COMPRESSOR_ARGUMENTS=(-b 256K -comp "${SQUASHFS_COMPRESSOR}" -Xhc)
 
 # Set to any value to Use DwarFS instead of SquashFS
-USE_DWARFS=
+USE_DWARFS=1
 DWARFS_COMPRESSOR_ARGUMENTS=(
 	-l7 -C zstd:level=19 --metadata-compression null
 	-S 22 -B 1 --order nilsimsa
 	-W 12 -w 4 --no-history-timestamps --no-create-timestamp
 )
-
 
 # List of links to arch bootstrap archive
 # Conty will try to download each one of them sequentially
