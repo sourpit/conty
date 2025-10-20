@@ -38,7 +38,7 @@ PACKAGES=(
 	gtk3 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader
 	sdl2-compat lib32-sdl2-compat vkd3d lib32-vkd3d libgphoto2
 	openssl-1.1 lib32-openssl-1.1 cabextract wget gamemode lib32-gamemode
-  mangohud lib32-mangohud
+  mangohud lib32-mangohud poppler
 	# productive
 	solvespace openboard
 	# gaming
@@ -93,7 +93,7 @@ Server = https://mirror.tmmworkshop.com/archlinux/$repo/os/$arch
 
 # Enable this variable to use the system-wide mksquashfs/mkdwarfs instead
 # of those provided by the Conty project
-USE_SYS_UTILS=0
+USE_SYS_UTILS=1
 
 # Supported compression algorithms: lz4, zstd, gzip, xz, lzo
 # These are the algorithms supported by the integrated squashfuse
