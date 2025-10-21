@@ -851,7 +851,6 @@ if [ "${dwarfs_image}" = 1 ]; then
 	               -o debuglevel=error \
 	               -o workers="${dwarfs_num_workers}" \
 	               -o mlock=try \
-	               -o no_cache_image \
 	               -o cache_files \
 	               -o cachesize="${dwarfs_cache_size}" \
 	               -o decratio=0.6 \
