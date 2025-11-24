@@ -42,7 +42,7 @@ PACKAGES=(
 	# productive
 	solvespace openboard
 	# gaming
-	lutris python-protobuf steam steam-native-runtime steamtinkerlaunch lsfg-vk-git
+	lutris python-protobuf steam steamtinkerlaunch lsfg-vk-git
 	# extra
 	ttf-dejavu ttf-liberation librewolf pcmanfm
 	file-roller jre17-openjdk ffmpegthumbnailer
